@@ -1,3 +1,4 @@
+
 ![logo](https://i.postimg.cc/Zn43rfQR/logo.png)
 
 Offline Bitcoin private key cracker leveraging the [Loyce Club](http://addresses.loyce.club/) legacy address database. Generates compressed **[C]** and uncompressed **[U]** P2PKH addresses from wordlists or credential dumps and checks balances against a local indexed dataset.
@@ -15,7 +16,8 @@ Offline Bitcoin private key cracker leveraging the [Loyce Club](http://addresses
 ```bash
 python3 BTC-BrainCracker.py -i <input> -o <output> --mode <mode> [--lowcase]
 ```
-![image](https://i.postimg.cc/VNXWnbNV/test.gif)
+
+<img width="640" height="365" alt="output" src="https://github.com/user-attachments/assets/6b864602-5654-4baa-a0f1-05dd6c7dc443" />
 
 ### Modes
 
