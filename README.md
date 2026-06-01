@@ -5,13 +5,15 @@ Offline Bitcoin Brain Wallets CPU Cracker leveraging the [Loyce Club](http://add
 
 > **Note:** This is a purely offline tool. No external APIs are contacted; all lookups are performed against a local copy of the blockchain address database.
 
-## Requirements
+
+## ⚙️ Requirements
 
 - Python 3.10+
 - `pip install colorama ecdsa pycryptodome base58 zstandard tqdm pyfiglet`
 - `blockchair_bitcoin_addresses_and_balance_LATEST.tsv.gz` placed in `./funded/`
 
-## Usage
+
+## ⚡️ Usage
 
 ```bash
 python3 BTC-BrainCracker.py -i <input> -o <output> --mode <mode> [--lowcase]
@@ -19,7 +21,7 @@ python3 BTC-BrainCracker.py -i <input> -o <output> --mode <mode> [--lowcase]
 
 <img width="640" height="365" alt="output" src="https://github.com/user-attachments/assets/6b864602-5654-4baa-a0f1-05dd6c7dc443" />
 
-### Modes
+#### Modes
 
 | Mode | Description | Input Format Example |
 |------|-------------|---------------------|
@@ -28,7 +30,7 @@ python3 BTC-BrainCracker.py -i <input> -o <output> --mode <mode> [--lowcase]
 | `cpass` | Extract **passwords** from combo lists | `admin:P@ssw0rd` → `P@ssw0rd` |
 | `wallet` | Validate existing wallet credentials | `5Hue...;1A1zP1eP5...` or `priv;addr;label` |
 
-### Examples
+#### Examples
 
 ```bash
 # Wordlist mode
@@ -41,9 +43,8 @@ python3 BTC-BrainCracker.py -i combos.txt.gz -o hits.txt --mode cpass --lowcase
 python3 BTC-BrainCracker.py -i wallets.csv -o verified.txt --mode wallet
 ```
 
----
 
-## File Structure
+## 📂 File Structure
 
 ```
 ├── funded/                      # Local database directory
@@ -58,9 +59,8 @@ python3 BTC-BrainCracker.py -i wallets.csv -o verified.txt --mode wallet
 - **Checkpointing:** Progress is automatically saved to `resume/` after every 100 lines. Interrupted scans resume seamlessly.
 - **Supported formats:** Plain text (`.txt`, `.dic`), GZip (`.gz`), ZStandard (`.zst`).
 
----
 
-## Ethical Disclaimer
+## ⚠️ Ethical Disclaimer
 
 This tool is provided for **educational purposes, security research, and the recovery of your own lost credentials only**. 
 
